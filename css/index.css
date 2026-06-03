@@ -1,83 +1,124 @@
-:root {
-            --color-principal: #a8dadc; /* Azul pastel (puedes cambiarlo a #ffc8dd para rosa) */
-            --color-dorado: #d4af37;
-            --texto: #555;
-        }
+* { box-sizing: border-box; }
 
 body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            color: var(--texto);
-            background-color: #f9f9f9;
-            text-align: center;
-            overflow-x: hidden;
-        }
+    margin: 0;
+    background-color: #e0f2f1;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    justify-content: center;
+}
 
-/* Hero Section */
-.hero {
-            height: 100vh;
-            background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), 
-                        url('https://images.unsplash.com/photo-1519689689378-43d2c67424d4?auto=format&fit=crop&q=80&w=1000') center/cover;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
+.main-container {
+    width: 100%;
+    max-width: 450px; /* Limita el ancho en PC, pero llena el móvil */
+    background: white;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+}
 
-h1 {
-            font-family: 'Great Vibes', cursive;
-            font-size: 5rem;
-            color: var(--color-dorado);
-            margin: 0;
-        }
+/* Tipografía */
+.txt-nombre {
+    font-family: 'Pacifico', cursive;
+    color: #5b8fb9;
+    font-size: 3rem;
+    margin: 10px 0;
+}
 
-.fecha-top {
-            font-size: 1.2rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-        }
+.txt-bautizo {
+    color: #c5a059;
+    font-weight: 300;
+    margin-top: 20px;
+}
 
-        /* Secciones */
-section {
-            padding: 60px 20px;
-            max-width: 800px;
-            margin: auto;
-        }
+/* Foto */
+.foto-centrada {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
 
-.frase {
-            font-style: italic;
-            font-size: 1.1rem;
-            color: #888;
-        }
+.circulo-imagen {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 8px solid white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    background: #f0f0f0;
+}
 
-.tarjeta-info {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            margin-bottom: 20px;
-        }
+.circulo-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-.boton {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: var(--color-principal);
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            margin-top: 15px;
-            transition: 0.3s;
-            font-weight: bold;
-        }
+/* Contador */
+.timer-grid {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
 
-.boton:hover {
-            transform: scale(1.05);
-            background-color: #457b9d;
-        }
+.t-box {
+    background: #f4f9ff;
+    padding: 10px;
+    border-radius: 10px;
+    min-width: 70px;
+}
 
-footer {
-            padding: 40px;
-            font-size: 0.8rem;
-            background: #eee;
-        }
+.t-box span { font-size: 1.5rem; font-weight: bold; color: #5b8fb9; display: block; }
+
+/* Tarjetas de Eventos */
+.card-evento {
+    margin: 30px 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background: #fafafa;
+    border: 1px solid #eee;
+}
+
+.card-evento i { font-size: 2rem; color: #5b8fb9; margin-bottom: 10px; }
+
+/* Botones */
+.btn-geo {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #2c4a73;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.btns-confirmar {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.btn {
+    flex: 1;
+    padding: 15px;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn.si { background: #5b8fb9; }
+.btn.no { background: #b0bec5; }
+
+/* Decoraciones Flotantes */
+.deco-icon {
+    position: absolute;
+    color: #d1e9f6;
+    font-size: 3rem;
+    z-index: 0;
+    opacity: 0.5;
+}
+.f1 { top: 50px; left: 20px; transform: rotate(-20deg); }
+.f2 { top: 200px; right: 20px; transform: rotate(15deg); }

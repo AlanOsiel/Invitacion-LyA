@@ -2,68 +2,110 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Bautizo - Invitación Digital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Bautizo Lian Adan</title>
     
-    <!-- Tipografías elegantes de Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-    
-    <!-- Librería de animaciones -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
-    <!-- Portada -->
-    <div class="hero">
-        <p class="fecha-top" data-aos="fade-down">¡Mi Bautizo!</p>
-        <h1 data-aos="zoom-in" data-aos-duration="2000">Mateo Alejandro</h1>
-        <p data-aos="fade-up">Sábado, 15 de Junio de 2024</p>
+    <div class="main-container">
+        <!-- Decoraciones de fondo con iconos para que no fallen -->
+        <div class="bubbles">
+            <i class="fas fa-fish deco-icon f1"></i>
+            <i class="fas fa-water deco-icon f2"></i>
+        </div>
+
+        <header class="padding-top">
+            <i class="fas fa-cross gold-cross"></i>
+            <p class="intro">Soy un pequeño tesoro del mar y quiero invitarlos a celebrar el día en que recibiré</p>
+            <h2 class="txt-bautizo">Mi Bautizo</h2>
+            <h1 class="txt-nombre">Lian Adan</h1>
+        </header>
+
+        <!-- Foto Principal con respaldo si no carga -->
+        <div class="foto-centrada">
+            <div class="circulo-imagen">
+                <!-- ASEGÚRATE QUE EL NOMBRE SEA IGUAL AL DE TU CARPETA -->
+                <img src="img/Lian.jpg" onerror="this.src='https://via.placeholder.com/300?text=Foto+del+Bebe'">
+            </div>
+        </div>
+
+        <div class="contador-v2">
+            <p>Faltan solo:</p>
+            <div id="reloj" class="timer-grid">
+                <div class="t-box"><span id="days">00</span><small>Días</small></div>
+                <div class="t-box"><span id="hours">00</span><small>Hrs</small></div>
+                <div class="t-box"><span id="minutes">00</span><small>Min</small></div>
+                <div class="t-box"><span id="seconds">00</span><small>Seg</small></div>
+            </div>
+        </div>
+
+        <section class="info-familiar">
+            <p class="frase-amor">"Será una alegría contar con su compañía en este momento tan especial"</p>
+            
+            <div class="padres-padrinos">
+                <h3>Mis papis</h3>
+                <p>Angel Zuazua & Lizbeth Izaguirre</p>
+                <br>
+                <h3>Mis padrinos</h3>
+                <p>Alvaro Zuazua & Sofia Quiroz</p>
+                <p>Johnattan Martinez & Coral Izaguirre</p>
+            </div>
+        </section>
+
+        <section class="eventos-v2">
+            <div class="fecha-badge">
+                <span class="f-dia">26</span>
+                <span class="f-mes">JUNIO 2026</span>
+            </div>
+
+            <div class="card-evento">
+                <i class="fas fa-church"></i>
+                <h3>Misa</h3>
+                <p>Parroquia de la Sagrada Familia 12pm</p>
+                <a href="https://maps.google.com" class="btn-geo">Ver Ubicación</a>
+            </div>
+
+            <div class="card-evento">
+                <i class="fas fa-umbrella-beach"></i>
+                <h3>Recepción</h3>
+                <p>Palapa Diamante 5pm</p>
+                <a href="https://maps.google.com" class="btn-geo">Ver Ubicación</a>
+            </div>
+        </section>
+
+        <section class="rsvp-v2">
+            <h2>¿Nos acompañas?</h2>
+            <p>Confirma antes del 15 de junio</p>
+            <div class="btns-confirmar">
+                <a href="https://wa.me/521234567890" class="btn si">Sí asistiré</a>
+                <a href="https://wa.me/521234567890" class="btn no">No podré</a>
+            </div>
+            <p class="swim"><i class="fas fa-swimmer"></i> Trae tu traje de baño</p>
+        </section>
+
+        <footer class="final">
+            <h2>Te esperamos</h2>
+            <p>¡Nos vemos pronto!</p>
+        </footer>
     </div>
 
-    <!-- Frase espiritual -->
-    <section class="frase" data-aos="fade-up">
-        <p>"Doy gracias a Dios por el don de la vida y a mis padres por traerme a su luz."</p>
-    </section>
-
-    <!-- Detalles de la ceremonia -->
-    <section>
-        <div class="tarjeta-info" data-aos="fade-right">
-            <h2 style="color: var(--color-dorado);">Ceremonia</h2>
-            <p>Parroquia de San Judas Tadeo</p>
-            <p>12:00 PM</p>
-            <a href="https://maps.google.com" target="_blank" class="boton">Ver Ubicación</a>
-        </div>
-
-        <div class="tarjeta-info" data-aos="fade-left">
-            <h2 style="color: var(--color-dorado);">Recepción</h2>
-            <p>Salón de Eventos "El Jardín"</p>
-            <p>02:30 PM</p>
-            <a href="https://maps.google.com" target="_blank" class="boton">Cómo llegar</a>
-        </div>
-    </section>
-
-    <!-- RSVP / Confirmación -->
-    <section data-aos="zoom-in">
-        <h3>¿Nos acompañas?</h3>
-        <p>Por favor, confirma tu asistencia antes del 1 de Junio.</p>
-        <!-- Cambia el número después de wa.me/ -->
-        <a href="https://wa.me/521234567890?text=Hola!%20Confirmo%20mi%20asistencia%20al%20bautizo%20de%20Mateo" class="boton" style="background-color: #25d366;">
-            Confirmar por WhatsApp
-        </a>
-    </section>
-
-    <footer>
-        Hecho con amor para Mateo Alejandro
-    </footer>
-
-    <!-- Scripts de animación -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
+        // Script del contador (igual que el anterior pero corregido)
+        const date = new Date('June 26, 2026 12:00:00').getTime();
+        setInterval(() => {
+            const now = new Date().getTime();
+            const diff = date - now;
+            document.getElementById('days').innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
+            document.getElementById('hours').innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById('minutes').innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById('seconds').innerText = Math.floor((diff % (1000 * 60)) / 1000);
+        }, 1000);
     </script>
 </body>
 </html>
